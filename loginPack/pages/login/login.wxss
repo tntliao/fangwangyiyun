@@ -1,0 +1,62 @@
+.loginContainer {
+  height: 100vh;
+  background-color: #dc2c1f;
+}
+
+.logoCircles {
+  margin: 0 auto;
+  position: relative;
+  width: 550rpx;
+  height: 550rpx;
+  border-radius: 50%;
+  border-bottom: 1px solid #e42c22;
+  /* background-color: yellow; */
+}
+
+.logoCircles .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logoCircles .logo image {
+  width: 100%;
+  height: 100%;
+}
+
+/*  */
+input[type='text'],
+input[type='PassWord'] {
+  display: block;
+  margin: 30rpx auto;
+  width: 360rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 48px;
+  color: #ffffff;
+  border: 4rpx solid #f12a25;
+}
+
+.plaColor {
+  color: #ffffff;
+}
+
+.textbox button {
+  padding: 0;
+  display: block;
+  height: 70rpx;
+  width: 180rpx !important;
+  font-size: 30rpx !important;
+  line-height: 70rpx;
+  border-radius: 36rpx;
+  color: #ffffff;
+  border: 4rpx solid #f12a25;
+  background-color: transparent;
+}

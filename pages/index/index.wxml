@@ -1,0 +1,89 @@
+<view class="indexContainer">
+  <!-- 头部 -->
+  <view class="indexHeader">
+    <view class="leftItem">
+      <text class="iconfont icon-gengduo"></text>
+    </view>
+    <view class="centerItem" bindtap="toSearch">
+      <text class="iconfont icon-sousuo"></text>
+      <text class="title">好后悔</text>
+    </view>
+    <view class="rightItem">
+      <text class="iconfont icon-huatong"></text>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="indexCarousel">
+    <swiper class="indexBaner" indicator-dots indicator-color="ivory" indicator-active-color="#d43c43" autoplay
+      interval="7000" circular>
+
+      <swiper-item class="item" wx:for="{{bannerList}}" wx:key="brannerId">
+        <image src="{{item.pic}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 五个图标 -->
+  <view class="indexOption">
+    <view class="Optionitem" data-page="recommend" bindtap="jump">
+      <view class="itemShell">
+        <text class="iconfont icon-yinyue"></text>
+      </view>
+      <text>每日推荐</text>
+    </view>
+    <view class="Optionitem">
+      <view class="itemShell">
+        <text class="iconfont icon-gedan"></text>
+      </view>
+      <text>歌单</text>
+    </view>
+    <view class="Optionitem">
+      <view class="itemShell">
+        <text class="iconfont icon-paixingbang"></text>
+      </view>
+      <text>排行榜</text>
+    </view>
+    <view class="Optionitem">
+      <view class="itemShell">
+        <text class="iconfont icon-shipin"></text>
+      </view>
+      <text>私人FM</text>
+    </view>
+    <view class="Optionitem">
+      <view class="itemShell">
+        <text class="iconfont icon-shipin" bindlongtap="a"></text>
+      </view>
+      <text>直播</text>
+    </view>
+  </view>
+  <!-- 线 -->
+  <view class="line"></view>
+  <!-- 歌单推荐 -->
+  <NavHeader title="推荐歌单"></NavHeader>
+  <!-- 推荐内容 -->
+  <view class="recommendComtent">
+    <scroll-view class="scrollView" enable-flex scroll-x>
+      <view class="recommendItem" wx:for="{{recommendList}}" wx:key="id">
+        <image src="{{item.picUrl}}"></image>
+        <text class="title">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 排行榜 -->
+  <view class="rankingContainer">
+    <NavHeader title="排行榜"></NavHeader>
+    <swiper class="ranking" next-margin="60rpx">
+      <swiper-item class="item" wx:for="{{topList}}" wx:key="name">
+        <text class="title">{{item.name}}</text>
+        <view class="itemContainer">
+          <view wx:for="{{item.tracks}}" wx:for-item="musicItem" wx:key="id">
+            <image src="{{musicItem.al.picUrl}}"></image>
+            <text class="serial">{{index + 1}}</text>
+            <text class="songTitle">{{musicItem.al.name}}</text>
+            <text class="author">-{{musicItem.ar[0].name}}</text>
+            <text class="iconfont"></text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

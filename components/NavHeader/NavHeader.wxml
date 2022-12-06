@@ -1,0 +1,7 @@
+<view class="recommend">
+  <text class="title">{{title}}</text>
+  <view class="more">
+    <text class="rightTitle">更多</text>
+    <text class="iconfont icon-aui-icon-right"></text>
+  </view>
+</view>

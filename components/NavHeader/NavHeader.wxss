@@ -1,0 +1,26 @@
+/* 推荐歌单 */
+.recommend {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.recommend .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #383838;
+}
+
+.recommend .more {
+  display: flex;
+  align-items: center;
+  border-radius: 50rpx;
+  border: 1px solid #eaeaea;
+}
+
+.recommend .more .rightTitle {
+  font-size: 25rpx;
+  margin: 4rpx 14rpx;
+}

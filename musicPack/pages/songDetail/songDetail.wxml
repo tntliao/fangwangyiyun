@@ -1,0 +1,31 @@
+<view class="songDetailContainer">
+  <view class="upperPart">
+    <!-- 歌名 -->
+    <text class="songTitle">{{musicInfo.ar[0].name}}</text>
+    <!-- 摇杆 -->
+    <view class="circular"></view>
+    <image class="needle {{isPlay ? 'needleRotate' : ''}}" src="/static/images/song/needle.png"></image>
+    <view class="recordContainer {{isPlay ? 'recordContainerRotate' : ''}}">
+      <image class="disc" src="/static/images/song/disc.png"></image>
+      <image class="childImg" src="{{musicInfo.al.picUrl}}"></image>
+    </view>
+  </view>
+  <!-- 进度条 -->
+  <view class="progressBarControl">
+    <text class="startTime">{{cuurentTime}}</text>
+    <view class="progressBar">
+      <view class="played" style="width:{{currentWidth + 'rpx'}}">
+        <view class="circle"></view>
+      </view>
+    </view>
+    <text class="endTime">{{totalDuration}}</text>
+  </view>
+  <!-- 播放控件 -->
+  <view class="musiccCntrol">
+    <text class="iconfont icon-suiji1"></text>
+    <text class="iconfont icon-shangyishou_huaban" id="pre" bindtap="handleSwitch"></text>
+    <text class="iconfont {{isPlay ? 'icon-zanting' : 'icon-bofang'}} big" bindtap="handlePlay"></text>
+    <text class="iconfont icon-xiayishou_huaban" id="next" bindtap="handleSwitch"></text>
+    <text class="iconfont icon-liebiao"></text>
+  </view>
+</view>

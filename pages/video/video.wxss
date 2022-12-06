@@ -1,0 +1,124 @@
+.videoContainer {
+  padding: 8rpx 20rpx 0;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  height: 60rpx;
+  justify-content: space-between;
+}
+
+.header .search {
+  width: 78%;
+  line-height: 60rpx;
+  text-align: center;
+  color: #dc2c1f;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  /* background-color: red; */
+}
+
+.header .leftIcon image {
+  width: 65rpx;
+  height: 65rpx;
+}
+
+.header .rightIcon image {
+  width: 58rpx;
+  height: 58rpx;
+}
+
+/* 导航 */
+.navContainer {
+  margin-top: 16rpx;
+  height: 55rpx;
+  display: flex;
+}
+
+.navContainer .viewItem {
+  margin: 0 18rpx;
+  font-size: 24rpx;
+  flex-shrink: 0;
+}
+
+.navContainer .navItem {
+  height: 90%;
+  line-height: 55rpx;
+}
+
+.navContainer .navItem.active {
+  border-bottom: 4rpx solid red;
+}
+
+/* 视频*/
+.videoScroll {
+  margin-top: 10rpx;
+  height: calc(100vh - 131rpx);
+}
+
+.videoItem {
+  overflow: hidden;
+}
+
+.videoItem .common {
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+/*  */
+.videoItem .content {
+  font-size: 24rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* footer */
+.footer {
+  border-top: 1rpx solid #eee;
+  padding: 20rpx 0;
+}
+
+.footer .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.footer .nickName {
+  font-size: 26rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.footer .comments_praised {
+  float: right;
+}
+
+.comments_praised .btn {
+  display: inline;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.comments_praised .btn:after {
+  border: none;
+}
+
+.comments_praised .item {
+  margin-left: 50rpx;
+  position: relative;
+}
+
+.comments_praised .item .count {
+  position: absolute;
+  top: -20rpx;
+  font-size: 20rpx;
+}

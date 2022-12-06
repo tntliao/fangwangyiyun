@@ -1,0 +1,144 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer {
+  height: 100%;
+  background-image: linear-gradient(#235168, #2d201c);
+}
+
+.upperPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.songTitle {
+  font-size: 24rpx;
+}
+
+.circular {
+  position: relative;
+  z-index: 1000;
+  margin-top: 15rpx;
+  width: 55rpx;
+  height: 55rpx;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.needle {
+  position: relative;
+  z-index: 100;
+  left: 57rpx;
+  width: 192rpx;
+  height: 274rpx;
+  transform-origin: 40rpx 0;
+  transform: translateY(-25rpx) rotate(-20deg);
+  transition: transform 1s;
+}
+
+.needle.needleRotate {
+  transform: translateY(-25rpx) rotate(0deg);
+}
+
+.recordContainer {
+  position: relative;
+  width: 598rpx;
+  height: 598rpx;
+  top: -140rpx;
+  z-index: 10;
+}
+
+.recordContainerRotate {
+  animation: rotate 5s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.disc {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+.childImg {
+  position: absolute;
+  width: 370rpx;
+  height: 370rpx;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* 播放控件 */
+.musiccCntrol {
+  position: absolute;
+  width: 85%;
+  height: 120rpx;
+  bottom: 80rpx;
+  left: calc(calc(100vw - 85%) / 2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.musiccCntrol .iconfont {
+  color: #e3e3e3;
+  font-size: 60rpx;
+}
+
+.musiccCntrol .iconfont.big {
+  font-size: 90rpx;
+}
+
+/* 进度条 */
+.progressBarControl {
+  position: relative;
+  width: 700rpx;
+  height: 100rpx;
+  left: calc(calc(100vw - 700rpx) / 2);
+  bottom: -220rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressBarControl text {
+  color: #a7a7a7;
+  font-size: 22rpx;
+}
+
+.progressBar {
+  position: relative;
+  width: 525rpx;
+  height: 4rpx;
+  border-radius: 3rpx;
+  background-color: #878787;
+}
+
+.progressBar .played {
+  height: 4rpx;
+  border-radius: 3rpx;
+  background-color: #b2b2b2;
+  position: relative;
+}
+
+.progressBar .played .circle {
+  position: absolute;
+  width: 16rpx;
+  height: 16rpx;
+  right: -16rpx;
+  top: -6rpx;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}

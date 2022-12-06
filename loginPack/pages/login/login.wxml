@@ -1,0 +1,15 @@
+<view class="loginContainer">
+  <!-- logo部分 -->
+  <view class="logoCircles">
+    <view class="logo">
+      <image src="/static/images/logo.jpg"></image>
+    </view>
+  </view>
+  <!-- 登录部分 -->
+  <view class="textbox">
+    <input type="text" placeholder="手机号" id="phone" data-type="phone" placeholder-class="plaColor" value="13536361414" bindinput="collectingData" />
+    <input type="password" placeholder="密码" id="password" data-type="password" placeholder-class="plaColor" value="1qaz2wsx"
+      bindinput="collectingData" />
+    <button bindtap="login">登录</button>
+  </view>
+</view>

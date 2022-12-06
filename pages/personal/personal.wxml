@@ -1,0 +1,30 @@
+<view class="personalContainer">
+  <!-- 头部 -->
+  <view class="indexHeader">
+    <view class="leftItem">
+      <text class="iconfont icon-gengduo"></text>
+    </view>
+    <view class="rightItem">
+      <text class="iconfont icon-sousuo"></text>
+    </view>
+  </view>
+  <!-- 用户头像 -->
+  <view class="userAvatar">
+    <view class="avatar">
+      <image src="{{userData.avatarUrl ? userData.avatarUrl : '/static/images/userAvatart.jpg'}}"></image>
+    </view>
+    <text bindtap="toLogin">{{userData.nickname ? userData.nickname : '立即登录' }}<text
+        class="iconfont icon-aui-icon-right"></text></text>
+  </view>
+  <!-- 功能区 -->
+  <view class="functionArea">
+  </view>
+  <!-- 最近播放记录 -->
+  <view class="playbackRecord">
+    <text class="title">最近播放</text>
+    <scroll-view class="playbackRecordScroll" scroll-x enable-flex>
+      <image wx:for="{{playbackRecord}}" src="{{item.song.al.picUrl}}" wx:key="id">
+      </image>
+    </scroll-view>
+  </view>
+</view>
